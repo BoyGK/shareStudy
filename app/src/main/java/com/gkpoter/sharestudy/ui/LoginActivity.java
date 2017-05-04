@@ -10,8 +10,8 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 import com.gkpoter.sharestudy.R;
-import com.gkpoter.sharestudy.ui.fragment.LoginFragment;
-import com.gkpoter.sharestudy.ui.fragment.RegisterFragment;
+import com.gkpoter.sharestudy.ui.login_fragment.LoginFragment;
+import com.gkpoter.sharestudy.ui.login_fragment.RegisterFragment;
 
 
 /**

@@ -1,4 +1,4 @@
-package com.gkpoter.sharestudy.ui.fragment;
+package com.gkpoter.sharestudy.ui.base_fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -10,15 +10,15 @@ import android.view.ViewGroup;
 import com.gkpoter.sharestudy.R;
 
 /**
- * Created by "GKpoter" on 2017/5/3.
+ * Created by "GKpoter" on 2017/5/4.
  */
 
-public class LoginFragment extends Fragment {
+public class RightFragment extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_login, container, false);
+        View view = inflater.inflate(R.layout.fragment_right, container, false);
         return view;
     }
 

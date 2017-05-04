@@ -1,4 +1,4 @@
-package com.gkpoter.sharestudy.ui.fragment;
+package com.gkpoter.sharestudy.ui.login_fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gkpoter.sharestudy.ui.BaseActivity">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/base_viewpager"
+        android:layout_above="@+id/base_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:id="@+id/base_layout"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="80dp">
+        <TextView
+            android:id="@+id/base_left"
+            android:layout_width="match_parent"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="刘鑫一号"
+            android:layout_weight="1"
+            android:layout_height="50dp" />
+        <ImageView
+            android:id="@+id/base_middle"
+            android:transitionName="base_middle"
+            android:layout_width="match_parent"
+            android:src="@mipmap/ic_launcher_round"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/base_right"
+            android:layout_width="match_parent"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="刘鑫二号"
+            android:layout_weight="1"
+            android:layout_height="50dp" />
+    </LinearLayout>
+
+</RelativeLayout>

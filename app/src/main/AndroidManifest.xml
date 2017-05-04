@@ -23,7 +23,11 @@
         </activity>
         <activity
             android:name=".ui.LoginActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.BaseActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ui.base_fragment.UpActivity"></activity>
     </application>
 
 </manifest>
