@@ -27,7 +27,9 @@
         <activity
             android:name=".ui.BaseActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ui.base_fragment.UpActivity"></activity>
+        <activity
+            android:name=".ui.base_fragment.UpActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

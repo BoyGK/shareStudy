@@ -7,39 +7,49 @@
 
     <android.support.v4.view.ViewPager
         android:id="@+id/base_viewpager"
-        android:layout_above="@+id/base_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:layout_above="@+id/base_line"/>
 
+    <View
+        android:id="@+id/base_line"
+        android:layout_above="@+id/base_layout"
+        android:background="#eeeeee"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
     <LinearLayout
         android:id="@+id/base_layout"
         android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:orientation="horizontal"
-        android:layout_height="80dp">
+        android:layout_height="50dp">
         <TextView
             android:id="@+id/base_left"
             android:layout_width="match_parent"
-            android:layout_marginTop="30dp"
             android:gravity="center"
             android:text="刘鑫一号"
+            android:textColor="@color/colorPrimaryDark"
             android:layout_weight="1"
-            android:layout_height="50dp" />
-        <ImageView
-            android:id="@+id/base_middle"
-            android:transitionName="base_middle"
-            android:layout_width="match_parent"
-            android:src="@mipmap/ic_launcher_round"
-            android:layout_weight="1"
+            android:layout_marginRight="40dp"
             android:layout_height="match_parent" />
         <TextView
             android:id="@+id/base_right"
             android:layout_width="match_parent"
-            android:layout_marginTop="30dp"
             android:gravity="center"
             android:text="刘鑫二号"
             android:layout_weight="1"
-            android:layout_height="50dp" />
+            android:layout_marginLeft="40dp"
+            android:layout_height="match_parent" />
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/base_middle"
+        android:transitionName="base_middle"
+        android:layout_width="80dp"
+        android:src="@mipmap/upload"
+        android:layout_height="80dp"
+        android:padding="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>
