@@ -15,6 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.gkpoter.sharestudy.R;
+import com.gkpoter.sharestudy.myview.DepthPageTransformer;
 import com.gkpoter.sharestudy.ui.base_fragment.LeftFragment;
 import com.gkpoter.sharestudy.ui.base_fragment.RightFragment;
 import com.gkpoter.sharestudy.ui.base_fragment.UpActivity;
@@ -102,5 +103,6 @@ public class BaseActivity extends AppCompatActivity{
             @Override
             public void onPageScrollStateChanged(int i) {}
         });
+        viewPager.setPageTransformer(true, new DepthPageTransformer());
     }
 }

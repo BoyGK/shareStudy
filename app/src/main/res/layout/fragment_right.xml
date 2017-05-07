@@ -2,13 +2,101 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:text="刘鑫二号"
-        android:textSize="50sp"
-        android:gravity="center"
-        android:layout_height="match_parent" />
+        android:layout_height="220dp"
+        android:background="@drawable/side_nav_bar">
+
+        <ImageView
+            android:id="@+id/right_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/ic_launcher_round" />
+
+        <TextView
+            android:id="@+id/right_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/right_image"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="admin"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/right_name"
+            android:gravity="center"
+            android:text="持有豆子109个，超越99%的学生，授予称号“巨能学”"
+            android:textColor="#ffffff" />
+
+        <ImageView
+            android:id="@+id/right_editSelf"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="25dp"
+            android:src="@mipmap/pen" />
+
+        <ImageView
+            android:id="@+id/right_setting"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="25dp"
+            android:src="@mipmap/cog_outline" />
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        app:cardElevation="2dp"
+        android:background="#eeeeee"
+        android:layout_height="50dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:hint="论坛提问？"
+                android:paddingLeft="10dp"
+                android:textColor="#515151"
+                android:textCursorDrawable="@null"
+                android:background="@null"/>
+
+            <ImageButton
+                android:id="@+id/right_send"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="7dp"
+                android:layout_weight="7"
+                android:background="@drawable/ic_menu_send" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <GridView
+        android:layout_width="match_parent"
+        android:id="@+id/right_icon"
+        android:layout_marginTop="15dp"
+        android:numColumns="3"
+        android:scrollbars="none"
+        android:layout_height="match_parent"/>
 
 </LinearLayout>

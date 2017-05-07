@@ -11,7 +11,7 @@
         android:id="@+id/up_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#eeeeee"
+        android:background="@drawable/side_nav_bar"
         android:elevation="4dp"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         android:weightSum="1"
@@ -28,8 +28,9 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:textColor="#ffffff"
                 android:text="取消"
-                android:textSize="20sp" />
+                android:textSize="18sp" />
 
             <ImageView
                 android:layout_width="match_parent"
@@ -46,7 +47,8 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="上传"
-                android:textSize="20sp" />
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
         </LinearLayout>
     </android.support.v7.widget.Toolbar>
 
