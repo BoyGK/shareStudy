@@ -1,19 +1,34 @@
 package com.gkpoter.sharestudy.ui.base_fragment;
 
+import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.ListView;
 
 import com.gkpoter.sharestudy.R;
+import com.gkpoter.sharestudy.ui.adapter.LeftViewAdapter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by "GKpoter" on 2017/5/4.
  */
 
 public class LeftFragment extends Fragment {
+
+    private ImageView image;
+    private ListView listView;
+    private LeftViewAdapter adapter;
+    private List<String> list;
+    private SwipeRefreshLayout swipeRefreshLayout;
 
     @Nullable
     @Override
@@ -25,5 +40,38 @@ public class LeftFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+
+        init();
+        image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(),SearchActivity.class));
+            }
+        });
+
+        list=new ArrayList<>();
+        adapter=new LeftViewAdapter(getData(),getActivity());
+        listView.setAdapter(adapter);
+
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                swipeRefreshLayout.setRefreshing(false);
+            }
+        });
+    }
+
+    private void init() {
+        image= (ImageView) getActivity().findViewById(R.id.left_search);
+        listView= (ListView) getActivity().findViewById(R.id.left_listView);
+        swipeRefreshLayout= (SwipeRefreshLayout) getActivity().findViewById(R.id.left_refresh);
+        swipeRefreshLayout.setColorSchemeColors(Color.rgb(0x19,0xb4,0xff));
+    }
+
+    private List<String> getData(){
+        for(int i=0;i<10;i++){
+            list.add(i+"");
+        }
+        return list;
     }
 }
