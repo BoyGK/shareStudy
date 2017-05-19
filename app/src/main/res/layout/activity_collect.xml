@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.gkpoter.sharestudy.ui.CollectActivity">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/side_nav_bar"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="2dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/side_nav_bar"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/collect_goback"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:src="@mipmap/back_outline" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/collect_delete"
+                android:layout_toRightOf="@+id/collect_goback"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:text="个人"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/collect_delete"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:padding="10dp"
+                android:src="@mipmap/trash" />
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/collect_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabIndicatorHeight="0dp"
+        app:tabSelectedTextColor="@color/colorPrimary"
+        app:tabTextColor="#a9a8a8"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:background="#c2c1c1"
+        android:layout_height="1dp"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/collect_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

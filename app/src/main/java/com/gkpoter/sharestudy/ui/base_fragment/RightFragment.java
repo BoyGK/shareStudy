@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import com.gkpoter.sharestudy.R;
 import com.gkpoter.sharestudy.ui.AboutActivity;
+import com.gkpoter.sharestudy.ui.CollectActivity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -88,12 +89,35 @@ public class RightFragment extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 //Toast.makeText(getActivity(), position + "", Toast.LENGTH_SHORT).show();
                 switch (position) {
+                    case 0:
+                        startToCollect(0);
+                        break;
+                    case 1:
+                        startToCollect(1);
+                        break;
+                    case 2:
+                        startToCollect(2);
+                        break;
+                    case 3:
+                        Snackbar.make(view, "论坛建设中。。。", Snackbar.LENGTH_SHORT)
+                                .show();
+                        break;
+                    case 4:
+                        Snackbar.make(view, "留言板建设中。。。", Snackbar.LENGTH_SHORT)
+                                .show();
+                        break;
                     case 5:
                         startActivity(new Intent(getActivity(), AboutActivity.class));
                         break;
                 }
             }
         });
+    }
+
+    private void startToCollect(int id) {
+        Intent intent=new Intent(getActivity(), CollectActivity.class);
+        intent.putExtra("pager",id);
+        startActivity(intent);
     }
 
     /**
