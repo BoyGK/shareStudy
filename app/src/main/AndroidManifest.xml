@@ -32,7 +32,13 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ui.base_fragment.SearchActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.DetailedActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.AboutActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

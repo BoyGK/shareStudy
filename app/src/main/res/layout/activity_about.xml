@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.gkpoter.sharestudy.ui.AboutActivity">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/side_nav_bar"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="2dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/side_nav_bar"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/about_goback"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:src="@mipmap/back_outline" />
+
+            <TextView
+                android:id="@+id/about_title"
+                android:layout_toRightOf="@+id/about_goback"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="关于"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_margin="25dp"
+        android:textSize="20dp"
+        android:textColor="#515151"
+        android:gravity="center"
+        android:text="项目组成员:\n\n白国请\n严超\n刘鑫\n冯宇林"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

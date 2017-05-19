@@ -9,10 +9,12 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.gkpoter.sharestudy.R;
+import com.gkpoter.sharestudy.ui.DetailedActivity;
 import com.gkpoter.sharestudy.ui.adapter.LeftViewAdapter;
 
 import java.util.ArrayList;
@@ -59,13 +61,20 @@ public class LeftFragment extends Fragment {
                 swipeRefreshLayout.setRefreshing(false);
             }
         });
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                startActivity(new Intent(getActivity(), DetailedActivity.class));
+            }
+        });
     }
 
     private void init() {
         image= (ImageView) getActivity().findViewById(R.id.left_search);
         listView= (ListView) getActivity().findViewById(R.id.left_listView);
         swipeRefreshLayout= (SwipeRefreshLayout) getActivity().findViewById(R.id.left_refresh);
-        swipeRefreshLayout.setColorSchemeColors(Color.rgb(0x19,0xb4,0xff));
+        swipeRefreshLayout.setColorSchemeColors(Color.BLUE);
     }
 
     private List<String> getData(){

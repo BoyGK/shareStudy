@@ -1,5 +1,6 @@
 package com.gkpoter.sharestudy.ui.base_fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
@@ -15,6 +16,7 @@ import android.widget.SimpleAdapter;
 import android.widget.Toast;
 
 import com.gkpoter.sharestudy.R;
+import com.gkpoter.sharestudy.ui.AboutActivity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -27,9 +29,9 @@ public class RightFragment extends Fragment {
 
     private GridView gridView;
     private ArrayList<HashMap<String, Object>> data;
-    private ImageView editSelf,setting;
+    private ImageView editSelf, setting;
     private ImageButton send;
-    
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -46,11 +48,11 @@ public class RightFragment extends Fragment {
         data = new ArrayList<HashMap<String, Object>>();
         initMenuView();
 
-        SimpleAdapter adapter = new SimpleAdapter(getActivity(),data,R.layout.adapter_right_gridview,
-                new String[] {"ItemImage","ItemText"},
-                new int[] {R.id.adapter_right_image,R.id.adapter_right_text});
+        SimpleAdapter adapter = new SimpleAdapter(getActivity(), data, R.layout.adapter_right_gridview,
+                new String[]{"ItemImage", "ItemText"},
+                new int[]{R.id.adapter_right_image, R.id.adapter_right_text});
         gridView.setAdapter(adapter);
-        
+
         onClick();
 
     }
@@ -84,7 +86,12 @@ public class RightFragment extends Fragment {
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getActivity(),position+"", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getActivity(), position + "", Toast.LENGTH_SHORT).show();
+                switch (position) {
+                    case 5:
+                        startActivity(new Intent(getActivity(), AboutActivity.class));
+                        break;
+                }
             }
         });
     }
@@ -126,9 +133,9 @@ public class RightFragment extends Fragment {
     }
 
     private void init() {
-        gridView= (GridView) getActivity().findViewById(R.id.right_icon);
-        editSelf= (ImageView) getActivity().findViewById(R.id.right_editSelf);
-        setting= (ImageView) getActivity().findViewById(R.id.right_setting);
-        send= (ImageButton) getActivity().findViewById(R.id.right_send);
+        gridView = (GridView) getActivity().findViewById(R.id.right_icon);
+        editSelf = (ImageView) getActivity().findViewById(R.id.right_editSelf);
+        setting = (ImageView) getActivity().findViewById(R.id.right_setting);
+        send = (ImageButton) getActivity().findViewById(R.id.right_send);
     }
 }

@@ -28,7 +28,7 @@
                 android:layout_height="match_parent" />
             <ImageView
                 android:id="@+id/left_search"
-                android:layout_width="60dp"
+                android:layout_width="?attr/actionBarSize"
                 android:padding="8dp"
                 android:layout_alignParentRight="true"
                 android:src="@mipmap/zoom_in_outline"
