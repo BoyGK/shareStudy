@@ -18,6 +18,9 @@ import android.widget.Toast;
 import com.gkpoter.sharestudy.R;
 import com.gkpoter.sharestudy.ui.AboutActivity;
 import com.gkpoter.sharestudy.ui.CollectActivity;
+import com.gkpoter.sharestudy.ui.EditselfActivity;
+import com.gkpoter.sharestudy.ui.MessageBoardActivity;
+import com.gkpoter.sharestudy.ui.SettingActivity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -62,13 +65,15 @@ public class RightFragment extends Fragment {
         setting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getActivity(), "设置（登录，退出，主题）", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getActivity(), SettingActivity.class));
+                //Toast.makeText(getActivity(), "设置（登录，退出，主题）", Toast.LENGTH_SHORT).show();
             }
         });
         editSelf.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getActivity(), "个人信息编辑", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getActivity(), EditselfActivity.class));
+                //Toast.makeText(getActivity(), "个人信息编辑", Toast.LENGTH_SHORT).show();
             }
         });
         send.setOnClickListener(new View.OnClickListener() {
@@ -78,7 +83,8 @@ public class RightFragment extends Fragment {
                         .setAction("论坛", new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
-                                Toast.makeText(getActivity(), "3", Toast.LENGTH_SHORT).show();
+                                Snackbar.make(v, "论坛建设中。。。", Snackbar.LENGTH_SHORT)
+                                        .show();
                             }
                         })
                         .show();
@@ -103,8 +109,7 @@ public class RightFragment extends Fragment {
                                 .show();
                         break;
                     case 4:
-                        Snackbar.make(view, "留言板建设中。。。", Snackbar.LENGTH_SHORT)
-                                .show();
+                        startActivity(new Intent(getActivity(), MessageBoardActivity.class));
                         break;
                     case 5:
                         startActivity(new Intent(getActivity(), AboutActivity.class));
