@@ -39,23 +39,23 @@
 
         <ImageView
             android:id="@+id/right_editSelf"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentTop="true"
             android:layout_marginRight="25dp"
             android:layout_marginTop="25dp"
-            android:src="@mipmap/pen" />
+            android:src="@mipmap/user" />
 
         <ImageView
             android:id="@+id/right_setting"
             android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_height="25dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="25dp"
             android:layout_marginTop="25dp"
-            android:src="@mipmap/cog_outline" />
+            android:src="@mipmap/settings" />
 
     </RelativeLayout>
 

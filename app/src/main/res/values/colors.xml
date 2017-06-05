@@ -5,4 +5,5 @@
     <color name="colorAccent">#FF4081</color>
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorHui">#D1D1D1</color>
+    <color name="colorItemClick">#303F9F</color>
 </resources>

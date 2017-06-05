@@ -9,6 +9,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -23,6 +24,7 @@ import com.gkpoter.sharestudy.ui.base_fragment.UpActivity;
 public class BaseActivity extends AppCompatActivity{
 
     private ViewPager viewPager;
+    private CardView cd1,cd2;
     private TextView tv1,tv2;
     private ImageView iv;
 
@@ -41,13 +43,13 @@ public class BaseActivity extends AppCompatActivity{
     }
 
     private void onClick() {
-        tv1.setOnClickListener(new View.OnClickListener() {
+        cd1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 viewPager.setCurrentItem(0);
             }
         });
-        tv2.setOnClickListener(new View.OnClickListener() {
+        cd2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 viewPager.setCurrentItem(1);
@@ -64,8 +66,10 @@ public class BaseActivity extends AppCompatActivity{
     }
 
     private void init() {
-        tv1= (TextView) findViewById(R.id.base_left);
-        tv2= (TextView) findViewById(R.id.base_right);
+        cd1= (CardView) findViewById(R.id.base_left);
+        cd2= (CardView) findViewById(R.id.base_right);
+        tv1 = (TextView) findViewById(R.id.base_left_tv);
+        tv2= (TextView) findViewById(R.id.base_right_tv);
         iv= (ImageView) findViewById(R.id.base_middle);
         viewPager= (ViewPager) findViewById(R.id.base_viewpager);
     }
@@ -93,10 +97,10 @@ public class BaseActivity extends AppCompatActivity{
             @Override
             public void onPageSelected(int i) {
                 if(i==0){
-                    tv1.setTextColor(Color.BLUE);
+                    tv1.setTextColor(getResources().getColor(R.color.colorItemClick));
                     tv2.setTextColor(Color.BLACK);
                 }else{
-                    tv2.setTextColor(Color.BLUE);
+                    tv2.setTextColor(getResources().getColor(R.color.colorItemClick));
                     tv1.setTextColor(Color.BLACK);
                 }
             }

@@ -131,32 +131,32 @@ public class RightFragment extends Fragment {
     private void initMenuView() {
         HashMap<String, Object> map;
         map = new HashMap<String, Object>();
-        map.put("ItemImage", R.mipmap.arrow_up_outline);
+        map.put("ItemImage", R.mipmap.up);
         map.put("ItemText", "我的上传");
         data.add(map);
 
         map = new HashMap<String, Object>();
-        map.put("ItemImage", R.mipmap.heart_outline);
+        map.put("ItemImage", R.mipmap.favourite);
         map.put("ItemText", "我的收藏");
         data.add(map);
 
         map = new HashMap<String, Object>();
-        map.put("ItemImage", R.mipmap.arrow_down_outline);
+        map.put("ItemImage", R.mipmap.download);
         map.put("ItemText", "我的下载");
         data.add(map);
 
         map = new HashMap<String, Object>();
-        map.put("ItemImage", R.mipmap.phone_outline);
+        map.put("ItemImage", R.mipmap.call);
         map.put("ItemText", "论坛");
         data.add(map);
 
         map = new HashMap<String, Object>();
-        map.put("ItemImage", R.mipmap.edit);
+        map.put("ItemImage", R.mipmap.write);
         map.put("ItemText", "留言板");
         data.add(map);
 
         map = new HashMap<String, Object>();
-        map.put("ItemImage", R.mipmap.user_outline);
+        map.put("ItemImage", R.mipmap.about);
         map.put("ItemText", "关于");
         data.add(map);
     }

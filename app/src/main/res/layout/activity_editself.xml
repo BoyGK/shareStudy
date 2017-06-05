@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/cardview_light_background"
     tools:context="com.gkpoter.sharestudy.ui.EditselfActivity">
 
     <android.support.v7.widget.CardView
@@ -25,7 +26,7 @@
                 android:layout_width="?attr/actionBarSize"
                 android:layout_height="match_parent"
                 android:padding="10dp"
-                android:src="@mipmap/back_outline" />
+                android:src="@mipmap/back" />
 
             <TextView
                 android:id="@+id/setting_title"
@@ -75,78 +76,119 @@
         android:background="#d1d1d1"
         android:layout_height="1dp"/>
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:text="认证账号：0151122384"
-        android:textSize="20sp"
-        android:gravity="center_vertical"
-        android:textColor="#515151"
-        android:paddingLeft="10dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/bg_edittext_focused"
-        android:layout_height="50dp" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="1dp"
+            app:cardElevation="@dimen/cardview_default_elevation"
+            app:cardCornerRadius="@dimen/cardview_default_radius"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="0151122384"
+                android:textSize="@dimen/text_little_title"
+                android:gravity="center_vertical"/>
+        </android.support.v7.widget.CardView>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:text="真是姓名：白国青"
-        android:textSize="20sp"
-        android:gravity="center_vertical"
-        android:textColor="#515151"
-        android:paddingLeft="10dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="5dp"
-        android:background="@drawable/bg_edittext_focused"
-        android:layout_height="50dp" />
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="1dp"
+            app:cardElevation="@dimen/cardview_default_elevation"
+            app:cardCornerRadius="@dimen/cardview_default_radius"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="白国青"
+                android:textSize="@dimen/text_little_title"
+                android:gravity="center_vertical"/>
+        </android.support.v7.widget.CardView>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:text="    学校    ：内蒙古大学"
-        android:textSize="20sp"
-        android:gravity="center_vertical"
-        android:textColor="#515151"
-        android:paddingLeft="10dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="5dp"
-        android:background="@drawable/bg_edittext_focused"
-        android:layout_height="50dp" />
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="1dp"
+            app:cardElevation="@dimen/cardview_default_elevation"
+            app:cardCornerRadius="@dimen/cardview_default_radius"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="内蒙古大学"
+                android:textSize="@dimen/text_little_title"
+                android:gravity="center_vertical"/>
+        </android.support.v7.widget.CardView>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:text="    年级    ：大一"
-        android:textSize="20sp"
-        android:gravity="center_vertical"
-        android:textColor="#515151"
-        android:paddingLeft="10dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="5dp"
-        android:background="@drawable/bg_edittext_focused"
-        android:layout_height="50dp" />
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="1dp"
+            app:cardElevation="@dimen/cardview_default_elevation"
+            app:cardCornerRadius="@dimen/cardview_default_radius"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="2015级"
+                android:textSize="@dimen/text_little_title"
+                android:gravity="center_vertical"/>
+        </android.support.v7.widget.CardView>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:text="    专业    ：软件工程"
-        android:textSize="20sp"
-        android:gravity="center_vertical"
-        android:textColor="#515151"
-        android:paddingLeft="10dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="5dp"
-        android:background="@drawable/bg_edittext_focused"
-        android:layout_height="50dp" />
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="1dp"
+            app:cardElevation="@dimen/cardview_default_elevation"
+            app:cardCornerRadius="@dimen/cardview_default_radius"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="软件工程"
+                android:textSize="@dimen/text_little_title"
+                android:gravity="center_vertical"/>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
 
-    <Button
+    <android.support.v7.widget.CardView
         android:layout_width="match_parent"
-        android:text="点击修改"
-        android:textColor="#ffffff"
-        android:textSize="20sp"
-        android:layout_margin="10dp"
-        android:background="@color/colorPrimary"
-        android:layout_height="wrap_content" />
+        app:cardBackgroundColor="#ff4081"
+        android:layout_marginTop="2dp"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="@dimen/cardview_default_radius"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:layout_height="wrap_content" >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorWhite"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:gravity="center"
+            android:text="修改"
+            android:textSize="20sp"/>
+    </android.support.v7.widget.CardView>
 
 </LinearLayout>
